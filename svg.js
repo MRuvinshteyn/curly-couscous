@@ -60,9 +60,14 @@ var changeStroke = function(){
     stroke = document.getElementById("stroke").value;
 }
 
+var changeRad = function(){
+    rad = document.getElementById("rad").value;
+}
+
 
 svg.addEventListener("click",drawCircle,false);
 document.getElementById("clear").addEventListener("click",clearSVG);
 document.getElementById("changeCol1").addEventListener("click",changeCol1);
 document.getElementById("changeCol2").addEventListener("click",changeCol2);
 document.getElementById("changeStroke").addEventListener("click",changeStroke);
+document.getElementById("changeRad").addEventListener("click",changeRad);
