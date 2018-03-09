@@ -9,13 +9,17 @@ var circles = []; //diagnostic list
 
 var makeCircle = function(x,y){
     var c = {
+        cx: x,
+        cy: y,
+        r: rad,
+        fill: col1,
         circle: document.createElementNS("http://www.w3.org/2000/svg", "circle"),
         append: function(){svg.appendChild(this.circle);},
         change: function(e){
             if (this.getAttribute("fill") == col1){this.setAttribute("fill",col2);}
             else{
-                var newX = Math.ceil(Math.random() * 500); 
-                var newY = Math.ceil(Math.random() * 500); 
+                var newX = Math.ceil(Math.random() * 500);
+                var newY = Math.ceil(Math.random() * 500);
                 svg.removeChild(this);
                 circles.splice(circles.indexOf(this.circle));
                 svg.appendChild(makeCircle(newX,newY).circle);
